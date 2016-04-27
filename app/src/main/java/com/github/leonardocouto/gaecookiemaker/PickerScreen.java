@@ -4,12 +4,12 @@ import com.google.android.gms.common.AccountPicker;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
-import android.app.ListActivity;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-public class PickerScreen extends ListActivity {
+public class PickerScreen extends Activity {
 
   private final int REQUEST_CODE_PICK_ACCOUNT = 1122;
 
@@ -18,6 +18,7 @@ public class PickerScreen extends ListActivity {
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    this.setContentView(R.layout.picker_screen);
 
     String[] accountTypes = new String[]{"com.google"};
 
